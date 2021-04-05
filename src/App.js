@@ -9,5 +9,3 @@ export default function App() {
     </div>
   );
 }
-var myname = "youi";
-console.log(myname);
