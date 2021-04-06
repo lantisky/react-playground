@@ -1,8 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import "./style.css";
 
-class TodoApp extends React.Component {
+class Todo extends React.Component {
   constructor(props) {
     super(props);
     this.state = { items: [], text: "" };
@@ -14,7 +13,7 @@ class TodoApp extends React.Component {
     return (
       <div>
         <h3>TODO LIST APP</h3>
-        <Todo items={this.state.items} />
+        <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
           <label>Here is your CheckList, What's need to be done?</label>
           <input
@@ -51,12 +50,12 @@ class TodoList extends React.Component {
   render() {
     return (
       <ul>
-        {this.props.items.map(items => (
+        {this.props.items.map(item => (
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>
     );
   }
 }
-ReactDOM.render(<Todo />, document.getElementById("todos"));
 
+ReactDOM.render(<Todo />, document.getElementById("todos"));
