@@ -15,7 +15,8 @@ class Todo extends React.Component {
         <h3>Todo</h3>
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
-          <label>Here is your CheckList, What need to be done?</label>
+          <label>Here is your CheckList, What need to be done?
+          </label>
           <input
             id="new-todo"
             onChange={this.handleChange}
@@ -57,5 +58,5 @@ class TodoList extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<Todo />, document.getElementById("todos"));
+export default Todo;
+// ReactDOM.render(<Todo />, document.getElementById("todos"));
