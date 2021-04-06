@@ -12,10 +12,10 @@ class Todo extends React.Component {
   render() {
     return (
       <div>
-        <h3>TODO LIST APP</h3>
+        <h3>Todo</h3>
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
-          <label>Here is your CheckList, What's need to be done?</label>
+          <label>Here is your CheckList, What need to be done?</label>
           <input
             id="new-todo"
             onChange={this.handleChange}
